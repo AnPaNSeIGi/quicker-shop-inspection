@@ -1,0 +1,16 @@
+# 临时与本地文件
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# 本地还原的动作文件（含本机绝对路径，不应提交）
+action/*_本机路径版.json
+
+# Python
+__pycache__/
+*.pyc
+
+# 敏感数据（如有误放，禁止提交）
+*.xlsx.bak
+*_提取结果.xlsx
