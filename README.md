@@ -64,6 +64,8 @@ quicker-shop-inspection/
 └── docs/
     ├── 巡检规则说明.md                # 无人值守运行规则说明
     └── screenshots/                  # 巡检效果截图（打码后）
+        ├── RMS记录/                  # RMS 后台巡检截图（脚本输出 rms_*.png）
+        └── 邮件记录/                 # 邮件登录检查截图（脚本输出 mail_*.png）
 ```
 
 ## 四、快速开始
@@ -109,9 +111,11 @@ powershell -ExecutionPolicy Bypass -File scripts\restore_paths.ps1
 新增/删除店铺只需维护表格，无需改动脚本逻辑。
 
 ### 5.4 截图留档
-每次巡检自动将 RMS 后台界面、邮件登录界面截图保存至对应目录，
-文件名含精确时间戳（`rms_yyyyMMddHHmmssfff.png`），
-配合 `文件内图片命名.py` 可按时间顺序统一归档。
+每次巡检自动将截图保存至两处独立目录（对应脚本中的硬编码输出路径）：
+- **RMS记录/**：RMS 后台巡检界面截图（`rms_yyyyMMddHHmmssfff.png`）
+- **邮件记录/**：邮件登录检查截图（`mail_yyyyMMddHHmmssfff.png`）
+
+两处截图分别留档，配合 `文件内图片命名.py` 可按时间顺序统一归档。
 
 ## 六、辅助脚本说明
 
